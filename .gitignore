@@ -25,3 +25,5 @@ yarn-error.log*
 *.css.map
 
 *.scss
+# Local Netlify folder
+.netlify
