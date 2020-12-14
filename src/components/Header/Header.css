@@ -1,5 +1,58 @@
-header {
-	background-color: hsl(180, 29%, 50%);
-	color: whitesmoke;
+.header {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+	background-image: url("../Images/images/bg-header-mobile.svg");
+	background-color: var(--primary);
 	padding: 5rem;
+	border-radius: 3px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.board {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 80vw;
+	margin: 20px auto;
+	margin-top: -40px;
+	padding: 0.5rem;
+	background-color: var(--light-grayish-cyan);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 6px;
+	cursor: pointer;
+}
+.tag-list {
+	max-width: 65vw;
+}
+.tag {
+	margin-top: 10px;
+	margin-left: 5px;
+	color: var(--light-grayish-cyan);
+	background-color: var(--primary);
+	padding: 10px;
+	border-radius: 3px;
+}
+/* .tag:first-child {
+	margin-left: initial;
+} */
+
+.clear {
+	padding: 5px;
+	margin-right: 0px;
+	border-radius: 3rem;
+	background-color: inherit;
+	color: var(--primary);
+}
+.clear:hover {
+	text-decoration: underline;
+}
+@media screen and (min-width: 1200px) {
+	.header {
+		background-image: url("../Images/images/bg-header-desktop.svg");
+		background-color: var(--primary);
+	}
+	/* .board {
+		grid-template-columns: repeat(1fr);
+	} */
 }

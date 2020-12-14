@@ -1,45 +1,26 @@
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: #effafa;
-  color: #2c3a3a;
-  width: 100%;
-  font-family: "Spartan", sans-serif;
+	background-color: #effafa;
+	color: #2c3a3a;
+	width: 100%;
+	font-family: "Spartan", sans-serif;
 }
-
-body::before {
-  content: "";
-  background-image: url("./components/Images/images/bg-header-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 100% auto;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-@media screen and (min-width: 1200px) {
-  body::before {
-    background-image: url("./components/Images/images/bg-header-desktop.svg");
-  }
-  .container {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-  body {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
 .container {
-  margin: 30rem 1rem 40px 1rem;
+	margin: 25rem 1rem 40px 1rem;
 }
+@media screen and (min-width: 1200px) {
+	.container {
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+	body {
+		margin-right: 20px;
+	}
+}
+
 /*# sourceMappingURL=App.css.map */

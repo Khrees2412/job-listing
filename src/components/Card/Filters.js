@@ -1,10 +1,17 @@
 import React from "react";
 
-const Filters = ({ role, level, languages, tools }) => {
+const Filters = ({ filtered, setFiltered, role, level, languages, tools }) => {
+	const sendInfo = e => {
+		const item = e.target.innerHTML;
+		if (filtered && !filtered.includes(item)) {
+			setFiltered([...filtered, item]);
+		}
+		return;
+	};
 	const lang = languages
 		? languages.map((language, index) => {
 				return (
-					<button className="span lang" key={index}>
+					<button onClick={e => sendInfo(e)} className="span lang" key={index}>
 						{language}
 					</button>
 				);
@@ -14,19 +21,25 @@ const Filters = ({ role, level, languages, tools }) => {
 	const stack = tools
 		? tools.map((tool, index) => {
 				return (
-					<button className="span stack" key={index}>
+					<button onClick={e => sendInfo(e)} className="span stack" key={index}>
 						{tool}
 					</button>
 				);
 		  })
 		: "";
 	return (
-		<div className="filters">
-			<button className="span role">{role}</button>
-			<button className="span level">{level}</button>
-			{lang}
-			{stack}
-		</div>
+		<>
+			<div className="filters">
+				<button onClick={e => sendInfo(e)} className="span role">
+					{role}
+				</button>
+				<button onClick={e => sendInfo(e)} className="span level">
+					{level}
+				</button>
+				{lang}
+				{stack}
+			</div>
+		</>
 	);
 };
 export default Filters;
